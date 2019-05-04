@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
-import 'dart:io';
+import 'package:finance_management/features/dashboard/DashBoard.dart';
 import 'package:finance_management/routing/AppRouting.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -11,10 +10,10 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    await Future.delayed(Duration(seconds: 2)).then((_) {
-      Navigator.of(context).pushReplacementNamed(AppRouting.DASHBOARD);
-    });
     super.initState();
+    Future.delayed(Duration(seconds: 3), () => {
+      Navigator.pushReplacementNamed(context, AppRouting.DASHBOARD)
+    });
   }
 
   @override
@@ -26,11 +25,34 @@ class _SplashScreenState extends State<SplashScreen> {
           Container(
             width: double.infinity,
             height: double.infinity,
-            child: Image(
-              image: AssetImage("images/splash.jpg"),
-              fit: BoxFit.fill,
+            decoration: BoxDecoration(
+              color: Colors.blueAccent
             ),
           ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              CircleAvatar(
+                backgroundColor: Colors.blueGrey,
+                radius: 60,
+                child: Icon(
+                  Icons.ac_unit,
+                  size: 80,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 30),
+              ),
+              Text(
+                "Financial Management".toUpperCase(),
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold
+                ),
+              )
+            ],
+          )
         ],
       ),
     );

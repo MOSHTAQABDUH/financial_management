@@ -9,7 +9,7 @@ class FinanceManagement extends StatelessWidget {
     return new MaterialApp(
       title: "Finance Management",
       initialRoute: AppRouting.SPLASH,
-      routes: AppRouting.buildRoutes(),
+      routes: AppRouting.buildRoutes()
     );
   }
 }
