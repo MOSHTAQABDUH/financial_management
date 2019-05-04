@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:finance_management/features/dashboard/DashBoard.dart';
 import 'package:finance_management/routing/AppRouting.dart';
 
 class SplashScreen extends StatefulWidget {

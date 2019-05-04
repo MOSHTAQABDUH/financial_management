@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:finance_management/features/salary_setting/SalarySettingScreen.dart';
+import 'package:finance_management/features/profile/SalarySetting.dart';
 
 class DrawerMenu extends StatelessWidget {
   @override
@@ -86,7 +86,7 @@ class DrawerMenu extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                 builder: (BuildContext context) =>
-                                    SalarySettingScreen(),
+                                    SalarySetting(),
                               ));
                         },
                       ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:finance_management/widgets/DrawerMenu.dart';
-
+import 'package:finance_management/features/profile/Profile.dart';
+import 'package:finance_management/features/home/Home.dart';
+import 'package:finance_management/features/target/Target.dart';
 class Dashboard extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -8,11 +10,11 @@ class Dashboard extends StatefulWidget {
   }
 }
 class _DashboardState extends State<Dashboard> {
-  int _selectedIndex = 1;
+  int _selectedIndex = 0;
   final _widgetOptions = [
-    Text("Home"),
-    Text("Target"),
-    Text("Profile"),
+    Home(),
+    Target(),
+    Profile(),
     Text("More"),
   ];
 
@@ -24,12 +26,6 @@ class _DashboardState extends State<Dashboard> {
       ),
       drawer: new DrawerMenu(),
       body: _widgetOptions.elementAt(_selectedIndex),
-      floatingActionButton: new FloatingActionButton(
-        child: new Icon(Icons.add),
-        onPressed: () {
-          print("Pressed");
-        },
-      ),
       resizeToAvoidBottomPadding: false,
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,

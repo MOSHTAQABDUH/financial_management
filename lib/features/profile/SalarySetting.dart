@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:finance_management/formatter/NumberFormat.dart';
 
-class SalarySettingScreen extends StatefulWidget {
+class SalarySetting extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return new SalarySettingScreenState();
+    return new SalarySettingState();
   }
 }
 
-class SalarySettingScreenState extends State<SalarySettingScreen> {
+class SalarySettingState extends State<SalarySetting> {
   final GlobalKey salaryKey = new GlobalKey();
   final GlobalKey taxKey = new GlobalKey();
 
